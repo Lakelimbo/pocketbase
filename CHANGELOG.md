@@ -1,3 +1,19 @@
+## v0.41.0 (WIP)
+
+- ⚠️ Migrated the Go module from GitHub to the new host `https://ganigeorgiev.com`.
+    To migrate your existing Go projects, you could replace all occurances of `https://github.com/pocketbase/` with `https://ganigeorgiev.com/pocketbase/` in your source code files and then run `go mod tidy`.
+    If you are maintaining a Docker image that relies on a predictable download release URL, you can use:
+    `https://ganigeorgiev.com/meta/pocketbase/pocketbase/download/{releaseTag}/{filename}` _(it redirects to the actual API file URL)_.
+
+- Added `Extra` map field to all hook events to allow sharing arbitrary data between non-record hook handlers.
+
+- Added `ServeEvent.StartBannerFunc` field to customize the default startup console message.
+
+- Replaced the tree-like console characters with simple `>` in the startup console message since a user reported poor font rending.
+
+- Minor UI fixes _(removed extra preview popup horizontal scroll for very small images, replaced github.com urls with the new host, etc.)_.
+
+
 ## v0.40.6
 
 - Replaced the GitHub update command with update from the new host in relation to [#7841](https://github.com/pocketbase/pocketbase/discussions/7841).

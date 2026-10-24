@@ -4,7 +4,7 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "build": "dprint fmt && vite build"
+        "build": "vite build"
     },
     "dependencies": {
         "leaflet": "^1.9.4",
