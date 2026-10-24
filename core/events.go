@@ -135,6 +135,15 @@ type ServeEvent struct {
 	//
 	// UIExtensions is a list with the superuser UI extensions.
 	UIExtensions []UIExtension
+
+	// StartBannerFunc defines a custom console startup banner.
+	//
+	// If not set, defaults to the system one that prints the
+	// current HTTP API and dashboard addresses.
+	//
+	// Assign StartBannerFunc to a function with an empty body if you
+	// want to disable the console print entirely.
+	StartBannerFunc func(baseURL string)
 }
 
 type UIExtension struct {
