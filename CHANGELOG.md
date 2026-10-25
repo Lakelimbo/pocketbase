@@ -1,7 +1,11 @@
 ## v0.41.0 (WIP)
 
 - ⚠️ Migrated the Go module from GitHub to the new host `https://ganigeorgiev.com`.
-    To migrate your existing Go projects, you could replace all occurances of `https://github.com/pocketbase/` with `https://ganigeorgiev.com/pocketbase/` in your source code files and then run `go mod tidy`.
+    To migrate your existing Go projects:
+    - replace all occurances of `https://ganigeorgiev.com/pocketbase/` with `https://ganigeorgiev.com/pocketbase/` in your `.go` source files
+    - replace the pocketbase `require` statement in your `go.mod` with `ganigeorgiev.com/pocketbase v0.41.0`
+    - run `go mod tidy`
+
     If you are maintaining a Docker image that relies on a predictable download release URL, you can use:
     `https://ganigeorgiev.com/meta/pocketbase/pocketbase/download/{releaseTag}/{filename}` _(it redirects to the actual API file URL)_.
 
@@ -16,7 +20,7 @@
 
 ## v0.40.6
 
-- Replaced the GitHub update command with update from the new host in relation to [#7841](https://github.com/pocketbase/pocketbase/discussions/7841).
+- Replaced the GitHub update command with update from the new host in relation to [#7841](https://ganigeorgiev.com/pocketbase/pocketbase/discussions/7841).
     Note that this will be most likely the last release here on GitHub. The next time when you run update, new releases will be fetched from `https://ganigeorgiev.com` _(there is nothing there yet)_.
 
 - Additional fileblob bucket escape checks for just in case if the filesystem abstraction is used as standalone without the PocketBase validations.
@@ -29,7 +33,7 @@
 - Bumped the min Go GitHub action version to 1.27.3 as it includes a [security fix](https://groups.google.com/g/golang-announce/c/66pojueaQek) related to the recent eMudhra CA compromise.
     _I didn't rush a fix 2 days ago as the impact for most PocketBase servers is not that serious and requires to already have a MiTM, but nonetheless it is recommended to update. Please make sure to also check for OS/Docker image updates to make sure that you have the latest `ca-certificates` bundle._
 
-- Bumped `golang.org/x/` dependencies ([#7865](https://github.com/pocketbase/pocketbase/discussions/7865)).
+- Bumped `golang.org/x/` dependencies ([#7865](https://ganigeorgiev.com/pocketbase/pocketbase/discussions/7865)).
 
 - Bumped goja and its related dependencies _(string allocations optimization, `Date.getYear/setYear` support and other minor correctness fixes)_.
 
@@ -52,7 +56,7 @@
 
 ## v0.40.4
 
-- Fixed migration deadlock if a logs db write happens to run while the migration is still executing ([#7836](https://github.com/pocketbase/pocketbase/issues/7836)).
+- Fixed migration deadlock if a logs db write happens to run while the migration is still executing ([#7836](https://ganigeorgiev.com/pocketbase/pocketbase/discussions/7836)).
 
 - `app.ResetBootstrapState()` was soft-deprecated in favour of `app.ClearBootstrap()`.
     _Additionally a new `app.OnBootstrapClear()` hook was added to allow clearing custom allocated `OnBootstrap` resources in case the app uses a non-standard initialization (e.g. doesn't call `Start()` or intentionally skip the `OnTerminate` hook)._
@@ -77,9 +81,9 @@
 
 - Minor UI fixes (updated dark primary btn color contrast, force reload the records list if the deleted record has self-referenced cascade relation field, etc.).
 
-- Changed JSVM `$app` variable definition from TS type to interface ([#7834](https://github.com/pocketbase/pocketbase/issues/7834)).
+- Changed JSVM `$app` variable definition from TS type to interface ([#7834](https://ganigeorgiev.com/pocketbase/pocketbase/discussions/7834)).
 
-- Bumped `golang.org/x/*` dependencies to silence security scanners ([#7829](https://github.com/pocketbase/pocketbase/discussions/7829)).
+- Bumped `golang.org/x/*` dependencies to silence security scanners ([#7829](https://ganigeorgiev.com/pocketbase/pocketbase/discussions/7829)).
 
 
 ## v0.40.2
@@ -100,8 +104,8 @@
 ## v0.40.1
 
 - Fixes for some reported regressions related to the `encoding/json/v2` update:
-    - allow mangling invalid UTF8 characters when serializing json data ([#7814](https://github.com/pocketbase/pocketbase/issues/7814))
-    - fixed OAuth2 providers config merge incorrectly replacing the entire slice ([#7815](https://github.com/pocketbase/pocketbase/issues/7815))
+    - allow mangling invalid UTF8 characters when serializing json data ([#7814](https://ganigeorgiev.com/pocketbase/pocketbase/discussions/7814))
+    - fixed OAuth2 providers config merge incorrectly replacing the entire slice ([#7815](https://ganigeorgiev.com/pocketbase/pocketbase/discussions/7815))
 
 
 ## v0.40.0
@@ -131,7 +135,7 @@
     - `filesystem.OnNewWriter()` hook to allow listening for new/to-be-created files _(it is not exposed in `core.App` instance for now to avoid introducing breaking changes)_.
     - `filesystem.OnDelete()` hook to allow listening for deleted files _(it is not exposed in `core.App` instance for now to avoid introducing breaking changes)_.
 
-- Optimized backups to no longer transaction lock the database during backup generation ([#7799](https://github.com/pocketbase/pocketbase/discussions/7799#discussioncomment-18108244)).
+- Optimized backups to no longer transaction lock the database during backup generation ([#7799](https://ganigeorgiev.com/pocketbase/pocketbase/discussions/7799#discussioncomment-18108244)).
 
 - Updated `modernc.org/sqlite` to 1.57.0 and registered by default the new `_defensive=1` DSN query parameter to enable [SQLite's defensive mode](https://sqlite.org/c3ref/c_dbconfig_defensive.html#sqlitedbconfigdefensive).
 

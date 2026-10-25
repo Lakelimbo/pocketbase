@@ -8072,7 +8072,7 @@ namespace core {
    * 
    * Note that if your pb_data has custom network mounts as subdirectories, then
    * it is possible the restore to fail during the `os.Rename` operations
-   * (see https://github.com/pocketbase/pocketbase/issues/4647).
+   * (see https://ganigeorgiev.com/pocketbase/pocketbase/discussions/4647).
    */
   restoreBackup(ctx: context.Context, name: string): void
  }
@@ -9005,7 +9005,7 @@ namespace core {
    * instead of replacing the entire providers config slice, we ensure
    * that partially submitted provider data (e.g. without clientSecret)
    * is merged on per config level based on the provider name
-   * (https://github.com/pocketbase/pocketbase/issues/7815).
+   * (https://ganigeorgiev.com/pocketbase/pocketbase/discussions/7815).
    */
   unmarshalJSON(b: string|Array<number>): void
  }
@@ -9029,7 +9029,7 @@ namespace core {
    * 
    * This usually shouldn't be needed but some OAuth2 vendors, like the LinkedIn OIDC,
    * may require manual adjustment due to returning error if extra parameters are added to the request
-   * (https://github.com/pocketbase/pocketbase/discussions/3799#discussioncomment-7640312)
+   * (https://ganigeorgiev.com/pocketbase/pocketbase/discussions/3799#discussioncomment-7640312)
    */
   pkce?: boolean
   name: string
@@ -14721,7 +14721,7 @@ namespace apis {
    * token for the systemSuperuser) to the installer UI so that users can
    * create their own custom superuser record.
    * 
-   * See https://github.com/pocketbase/pocketbase/discussions/5814.
+   * See https://ganigeorgiev.com/pocketbase/pocketbase/discussions/5814.
    */
   (app: CoreApp, systemSuperuser: core.Record, baseURL: string): void
  }

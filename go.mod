@@ -1,8 +1,12 @@
-module github.com/pocketbase/pocketbase
+module ganigeorgiev.com/pocketbase/pocketbase
 
 go 1.27
 
 require (
+	ganigeorgiev.com/fexpr v0.7.0
+	ganigeorgiev.com/pocketbase/dbx v1.13.0
+	ganigeorgiev.com/pocketbase/ozzo-validation/v4 v4.4.1
+	ganigeorgiev.com/pocketbase/tygoja v0.2.0
 	github.com/disintegration/imaging v1.6.2
 	github.com/domodwyer/mailyak/v3 v3.6.2
 	github.com/dop251/goja v0.0.0-20261023121931-6ace4dde0b29
@@ -10,11 +14,7 @@ require (
 	github.com/fatih/color v1.19.0
 	github.com/fsnotify/fsnotify v1.10.1
 	github.com/gabriel-vasile/mimetype v1.4.15
-	github.com/ganigeorgiev/fexpr v0.6.0
 	github.com/golang-jwt/jwt/v5 v5.3.1
-	github.com/pocketbase/dbx v1.12.0
-	github.com/pocketbase/ozzo-validation/v4 v4.3.0
-	github.com/pocketbase/tygoja v0.1.0
 	github.com/spf13/cast v1.10.0
 	github.com/spf13/cobra v1.10.2
 	golang.org/x/crypto v0.58.0
