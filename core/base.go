@@ -15,7 +15,6 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/fatih/color"
 	"ganigeorgiev.com/pocketbase/dbx"
 	"ganigeorgiev.com/pocketbase/pocketbase/tools/cron"
 	"ganigeorgiev.com/pocketbase/pocketbase/tools/filesystem"
@@ -26,6 +25,7 @@ import (
 	"ganigeorgiev.com/pocketbase/pocketbase/tools/store"
 	"ganigeorgiev.com/pocketbase/pocketbase/tools/subscriptions"
 	"ganigeorgiev.com/pocketbase/pocketbase/tools/types"
+	"github.com/fatih/color"
 	"github.com/spf13/cast"
 	"golang.org/x/sync/semaphore"
 )

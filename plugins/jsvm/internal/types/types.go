@@ -1299,9 +1299,9 @@ func main() {
 			"ganigeorgiev.com/pocketbase/pocketbase/core":             {"*"},
 			"ganigeorgiev.com/pocketbase/pocketbase/forms":            {"*"},
 			"ganigeorgiev.com/pocketbase/pocketbase":                  {"*"},
-			"path/filepath":                                     {"*"},
-			"os":                                                {"*"},
-			"os/exec":                                           {"Command"},
+			"path/filepath":                                           {"*"},
+			"os":                                                      {"*"},
+			"os/exec":                                                 {"Command"},
 		},
 		FieldNameFormatter: func(s string) string {
 			return mapper.FieldName(nil, reflect.StructField{Name: s})

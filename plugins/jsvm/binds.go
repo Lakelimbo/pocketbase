@@ -18,8 +18,6 @@ import (
 	"strings"
 	"time"
 
-	"github.com/dop251/goja"
-	"github.com/golang-jwt/jwt/v5"
 	"ganigeorgiev.com/pocketbase/dbx"
 	validation "ganigeorgiev.com/pocketbase/ozzo-validation/v4"
 	"ganigeorgiev.com/pocketbase/pocketbase/apis"
@@ -35,6 +33,8 @@ import (
 	"ganigeorgiev.com/pocketbase/pocketbase/tools/store"
 	"ganigeorgiev.com/pocketbase/pocketbase/tools/subscriptions"
 	"ganigeorgiev.com/pocketbase/pocketbase/tools/types"
+	"github.com/dop251/goja"
+	"github.com/golang-jwt/jwt/v5"
 	"github.com/spf13/cast"
 	"github.com/spf13/cobra"
 )

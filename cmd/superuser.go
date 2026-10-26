@@ -4,10 +4,10 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/fatih/color"
 	"ganigeorgiev.com/pocketbase/ozzo-validation/v4/is"
 	"ganigeorgiev.com/pocketbase/pocketbase/core"
 	"ganigeorgiev.com/pocketbase/pocketbase/tools/security"
+	"github.com/fatih/color"
 	"github.com/spf13/cobra"
 )
 

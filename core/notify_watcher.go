@@ -7,11 +7,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/fatih/color"
-	"github.com/fsnotify/fsnotify"
 	"ganigeorgiev.com/pocketbase/pocketbase/tools/hook"
 	"ganigeorgiev.com/pocketbase/pocketbase/tools/routine"
 	"ganigeorgiev.com/pocketbase/pocketbase/tools/security"
+	"github.com/fatih/color"
+	"github.com/fsnotify/fsnotify"
 )
 
 const systemHookIdNotifyWatcher = "__pbNotifyWatcherSystemHook__"

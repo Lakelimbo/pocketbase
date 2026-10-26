@@ -13,9 +13,9 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/gabriel-vasile/mimetype"
 	"ganigeorgiev.com/pocketbase/pocketbase/tools/inflector"
 	"ganigeorgiev.com/pocketbase/pocketbase/tools/security"
+	"github.com/gabriel-vasile/mimetype"
 )
 
 // FileReader defines an interface for a file resource reader.

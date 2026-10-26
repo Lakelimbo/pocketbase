@@ -5,9 +5,9 @@ import (
 	"log/slog"
 	"strings"
 
-	"github.com/fatih/color"
 	"ganigeorgiev.com/pocketbase/pocketbase/tools/logger"
 	"ganigeorgiev.com/pocketbase/pocketbase/tools/store"
+	"github.com/fatih/color"
 	"github.com/spf13/cast"
 )
 

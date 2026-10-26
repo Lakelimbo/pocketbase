@@ -8,11 +8,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/fatih/color"
 	"ganigeorgiev.com/pocketbase/dbx"
 	"ganigeorgiev.com/pocketbase/pocketbase/core"
 	"ganigeorgiev.com/pocketbase/pocketbase/tools/osutils"
 	"ganigeorgiev.com/pocketbase/pocketbase/ui"
+	"github.com/fatih/color"
 )
 
 // DefaultInstallerFunc is the default PocketBase installer function.

@@ -5,8 +5,8 @@ import (
 	"io"
 	"net/mail"
 
-	"github.com/gabriel-vasile/mimetype"
 	"ganigeorgiev.com/pocketbase/pocketbase/tools/hook"
+	"github.com/gabriel-vasile/mimetype"
 )
 
 // Message defines a generic email message struct.

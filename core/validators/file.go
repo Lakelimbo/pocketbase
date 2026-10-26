@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/gabriel-vasile/mimetype"
 	validation "ganigeorgiev.com/pocketbase/ozzo-validation/v4"
 	"ganigeorgiev.com/pocketbase/pocketbase/tools/filesystem"
+	"github.com/gabriel-vasile/mimetype"
 )
 
 // UploadedFileSize checks whether the validated [*filesystem.File]

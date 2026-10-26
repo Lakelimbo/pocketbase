@@ -16,7 +16,6 @@ import (
 	"testing"
 	"time"
 
-	"github.com/dop251/goja"
 	validation "ganigeorgiev.com/pocketbase/ozzo-validation/v4"
 	"ganigeorgiev.com/pocketbase/pocketbase/apis"
 	"ganigeorgiev.com/pocketbase/pocketbase/core"
@@ -25,6 +24,7 @@ import (
 	"ganigeorgiev.com/pocketbase/pocketbase/tools/mailer"
 	"ganigeorgiev.com/pocketbase/pocketbase/tools/router"
 	"ganigeorgiev.com/pocketbase/pocketbase/tools/types"
+	"github.com/dop251/goja"
 	"github.com/spf13/cast"
 )
 

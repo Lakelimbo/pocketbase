@@ -12,12 +12,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/fatih/color"
 	"ganigeorgiev.com/pocketbase/pocketbase/core"
 	"ganigeorgiev.com/pocketbase/pocketbase/tools/hook"
 	"ganigeorgiev.com/pocketbase/pocketbase/tools/list"
 	"ganigeorgiev.com/pocketbase/pocketbase/tools/routine"
 	"ganigeorgiev.com/pocketbase/pocketbase/ui"
+	"github.com/fatih/color"
 	"golang.org/x/crypto/acme"
 	"golang.org/x/crypto/acme/autocert"
 )
