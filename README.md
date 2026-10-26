@@ -138,7 +138,7 @@ Check also the [Testing guide](http://pocketbase.io/docs/testing) to learn how t
 
 If you discover a security vulnerability within PocketBase, please submit a [private bug](https://ganigeorgiev.com/pocketbase/discussions/new/Bugs?private=1) OR send an e-mail to **support at pocketbase.io**.
 
-You could find more details in the project [Security policy](https://ganigeorgiev.com/pocketbase/files/SECURITY.md).
+You could find more details in the project [Security policy](https://ganigeorgiev.com/pocketbase/pocketbase/files/SECURITY.md).
 
 
 ## Contributing
