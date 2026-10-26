@@ -9,7 +9,7 @@ import (
 	"ganigeorgiev.com/pocketbase/pocketbase/tools/dbutils"
 )
 
-// see https://ganigeorgiev.com/pocketbase/pocketbase/discussions/7689
+// see https://ganigeorgiev.com/pocketbase/discussions/7689
 func init() {
 	core.SystemMigrations.Register(func(txApp core.App) error {
 		collections, err := txApp.FindAllCollections()

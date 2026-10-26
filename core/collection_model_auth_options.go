@@ -418,7 +418,7 @@ type OAuth2Config struct {
 // instead of replacing the entire providers config slice, we ensure
 // that partially submitted provider data (e.g. without clientSecret)
 // is merged on per config level based on the provider name
-// (https://ganigeorgiev.com/pocketbase/pocketbase/discussions/7815).
+// (https://ganigeorgiev.com/pocketbase/discussions/7815).
 func (c *OAuth2Config) UnmarshalJSON(b []byte) error {
 	originalProviders := slices.Clone(c.Providers)
 
@@ -529,7 +529,7 @@ type OAuth2ProviderConfig struct {
 	//
 	// This usually shouldn't be needed but some OAuth2 vendors, like the LinkedIn OIDC,
 	// may require manual adjustment due to returning error if extra parameters are added to the request
-	// (https://ganigeorgiev.com/pocketbase/pocketbase/discussions/3799#discussioncomment-7640312)
+	// (https://ganigeorgiev.com/pocketbase/discussions/3799#discussioncomment-7640312)
 	PKCE *bool `form:"pkce" json:"pkce"`
 
 	Name         string         `form:"name" json:"name"`

@@ -307,7 +307,7 @@ func dropCollectionIndexes(app App, collection *Collection) error {
 			parsed := dbutils.ParseIndex(raw)
 
 			// note: don't check IsValid because the index table name may not be populated
-			// (https://ganigeorgiev.com/pocketbase/pocketbase/discussions/7689)
+			// (https://ganigeorgiev.com/pocketbase/discussions/7689)
 			if parsed.IndexName == "" {
 				return fmt.Errorf("failed to dop index - missing index name: %s", raw)
 			}

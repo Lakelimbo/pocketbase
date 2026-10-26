@@ -214,7 +214,7 @@ func (r *RecordFieldResolver) updateQueryWithDeduplicateConstraint(query *dbx.Se
 	//
 	// Disable the GROUP BY conditional checks for now since it prevents
 	// proper utilization of ORDER BY indexes (and maybe others)
-	// (https://ganigeorgiev.com/pocketbase/pocketbase/discussions/7461)
+	// (https://ganigeorgiev.com/pocketbase/discussions/7461)
 
 	// info := query.Info()
 	// if info.Distinct {

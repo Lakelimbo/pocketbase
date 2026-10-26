@@ -536,7 +536,7 @@ func (r *runner) processActiveProps() (*search.ResolverResult, error) {
 				return nil, fmt.Errorf("failed to initialize back relation field %q", backField.GetName())
 			}
 			if backRelField.CollectionId != collection.Id {
-				// https://ganigeorgiev.com/pocketbase/pocketbase/discussions/6590#discussioncomment-12496581
+				// https://ganigeorgiev.com/pocketbase/discussions/6590#discussioncomment-12496581
 				if r.nullifyMisingField {
 					return &search.ResolverResult{Identifier: "NULL"}, nil
 				}
@@ -832,7 +832,7 @@ func (r *runner) finalizeActivePropsProcessing(collection *Collection, prop stri
 
 	// wrap in json_extract to ensure that top-level primitives
 	// stored as json work correctly when compared to their SQL equivalent
-	// (https://ganigeorgiev.com/pocketbase/pocketbase/discussions/4068)
+	// (https://ganigeorgiev.com/pocketbase/discussions/4068)
 	if field.Type() == FieldTypeJSON {
 		result.NullFallback = search.NullFallbackDisabled
 		result.Identifier = dbutils.JSONExtract(r.activeTableAlias+"."+cleanFieldName, "")

@@ -24,7 +24,7 @@ const (
 // This is needed because modernc.org/libc doesn't follow semantic versioning
 // and using a version different from the one in the go.mod of modernc.org/sqlite
 // could have unintended side-effects and cause obscure build and runtime bugs
-// (https://ganigeorgiev.com/pocketbase/pocketbase/discussions/6136).
+// (https://ganigeorgiev.com/pocketbase/discussions/6136).
 func checkModerncDeps(app core.App) {
 	info, ok := debug.ReadBuildInfo()
 	if !ok {

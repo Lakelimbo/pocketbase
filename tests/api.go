@@ -181,7 +181,7 @@ func (scenario *ApiScenario) test(t testing.TB) {
 		}
 	}
 
-	// https://ganigeorgiev.com/pocketbase/pocketbase/discussions/7267
+	// https://ganigeorgiev.com/pocketbase/discussions/7267
 	if scenario.TestAppFactory == nil || !scenario.DisableTestAppCleanup {
 		defer testApp.Cleanup()
 	}

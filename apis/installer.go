@@ -21,7 +21,7 @@ import (
 // token for the systemSuperuser) to the installer UI so that users can
 // create their own custom superuser record.
 //
-// See https://ganigeorgiev.com/pocketbase/pocketbase/discussions/5814.
+// See https://ganigeorgiev.com/pocketbase/discussions/5814.
 func DefaultInstallerFunc(app core.App, systemSuperuser *core.Record, baseURL string) error {
 	if ui.DistDirFS == nil {
 		color.Magenta("You can create your first superuser by running: %s superuser upsert EMAIL PASS", executablePath())

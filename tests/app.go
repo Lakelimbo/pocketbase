@@ -155,7 +155,7 @@ func NewTestAppWithConfig(config core.BaseAppConfig) (*TestApp, error) {
 	t.OnServe().Bind(&hook.Handler[*core.ServeEvent]{
 		Func: func(e *core.ServeEvent) error {
 			t.registerEventCall("OnServe")
-			e.InstallerFunc = nil // https://ganigeorgiev.com/pocketbase/pocketbase/discussions/7202
+			e.InstallerFunc = nil // https://ganigeorgiev.com/pocketbase/discussions/7202
 			return e.Next()
 		},
 		Priority: -99999,

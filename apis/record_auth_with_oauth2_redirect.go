@@ -66,7 +66,7 @@ func oauth2SubscriptionRedirect(e *core.RequestEvent) error {
 	}
 
 	// temporary store the Apple user's name so that it can be later retrieved with the authWithOAuth2 call
-	// (see https://ganigeorgiev.com/pocketbase/pocketbase/discussions/7090)
+	// (see https://ganigeorgiev.com/pocketbase/discussions/7090)
 	if data.AppleUser != "" && data.Error == "" && data.Code != "" {
 		nameErr := parseAndStoreAppleRedirectName(
 			e.App,

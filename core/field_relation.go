@@ -287,7 +287,7 @@ func (f *RelationField) checkCollectionId(app App, collection *Collection) valid
 		}
 
 		// allow only views to have relations to other views
-		// (see https://ganigeorgiev.com/pocketbase/pocketbase/discussions/3000)
+		// (see https://ganigeorgiev.com/pocketbase/discussions/3000)
 		if !collection.IsView() && relCollection.IsView() {
 			return validation.NewError(
 				"validation_relation_field_non_view_base_collection",

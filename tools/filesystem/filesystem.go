@@ -538,11 +538,11 @@ var manualExtensionContentTypes = map[string]string{
 	// https://github.com/gabriel-vasile/mimetype/pull/113
 	".css": "text/css",
 
-	// https://ganigeorgiev.com/pocketbase/pocketbase/discussions/6597
+	// https://ganigeorgiev.com/pocketbase/discussions/6597
 	".js":  "text/javascript",
 	".mjs": "text/javascript",
 
-	// https://ganigeorgiev.com/pocketbase/pocketbase/discussions/7467
+	// https://ganigeorgiev.com/pocketbase/discussions/7467
 	".xlsx": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
 	".docx": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
 	".pptx": "application/vnd.openxmlformats-officedocument.presentationml.presentation",

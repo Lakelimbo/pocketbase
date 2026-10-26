@@ -141,7 +141,7 @@ func NewWithConfig(config Config) *PocketBase {
 	// hide the default help command (allow only `--help` flag)
 	pb.RootCmd.SetHelpCommand(&cobra.Command{Hidden: true})
 
-	// https://ganigeorgiev.com/pocketbase/pocketbase/discussions/6136
+	// https://ganigeorgiev.com/pocketbase/discussions/6136
 	pb.OnBootstrap().Bind(&hook.Handler[*core.BootstrapEvent]{
 		Id: ModerncDepsCheckHookId,
 		Func: func(be *core.BootstrapEvent) error {
@@ -254,8 +254,8 @@ func (pb *PocketBase) eagerParseFlags(config *Config) error {
 // - is the default help command
 // - is the default version command
 //
-// https://ganigeorgiev.com/pocketbase/pocketbase/discussions/404
-// https://ganigeorgiev.com/pocketbase/pocketbase/discussions/1267
+// https://ganigeorgiev.com/pocketbase/discussions/404
+// https://ganigeorgiev.com/pocketbase/discussions/1267
 func (pb *PocketBase) skipBootstrap() bool {
 	flags := []string{
 		"-h",

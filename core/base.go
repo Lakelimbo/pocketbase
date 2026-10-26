@@ -1317,7 +1317,7 @@ func normalizeSQLLog(sql string) string {
 
 func (app *BaseApp) initAuxDB() error {
 	// note: renamed to "auxiliary" because "aux" is a reserved Windows filename
-	// (see https://ganigeorgiev.com/pocketbase/pocketbase/discussions/5607)
+	// (see https://ganigeorgiev.com/pocketbase/discussions/5607)
 	dbPath := filepath.Join(app.DataDir(), auxDBFilename)
 
 	concurrentDB, err := app.config.DBConnect(dbPath)
@@ -1398,7 +1398,7 @@ func (app *BaseApp) registerBaseHooks() {
 		Func: func(e *ModelEvent) error {
 			if m, ok := e.Model.(FilesManager); ok && m.BaseFilesPath() != "" && supportFiles(e.Model) {
 				// ensure that there is a trailing slash so that the list iterator could start walking from the prefix dir
-				// (https://ganigeorgiev.com/pocketbase/pocketbase/discussions/5246#discussioncomment-10128955)
+				// (https://ganigeorgiev.com/pocketbase/discussions/5246#discussioncomment-10128955)
 				prefix := strings.TrimRight(m.BaseFilesPath(), "/") + "/"
 
 				// note: for now assume no context cancellation
@@ -1559,7 +1559,7 @@ func (app *BaseApp) initLogger() error {
 			// when we can't be sure if the logs write wasn't triggered while
 			// inside another AUX db transaction (ticker or batch threshold reached)
 			// which can block indefinitely and cause deadlock
-			// (https://ganigeorgiev.com/pocketbase/pocketbase/discussions/7836)
+			// (https://ganigeorgiev.com/pocketbase/discussions/7836)
 			shouldBlock, _ := ctx.Value(logger.BlockKey).(bool)
 			if shouldBlock {
 				runLogsWrite(logs)

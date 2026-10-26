@@ -213,7 +213,7 @@ export function pageApplicationSettings() {
                                     id: "meta.appURL",
                                     name: "meta.appURL",
                                     // note: text for compatibility with older versions
-                                    // (https://ganigeorgiev.com/pocketbase/pocketbase/discussions/7681)
+                                    // (https://ganigeorgiev.com/pocketbase/discussions/7681)
                                     //
                                     // @todo consider reverting back to "url" once enforced on the backend too
                                     type: "text",
