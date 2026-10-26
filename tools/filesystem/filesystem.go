@@ -16,9 +16,6 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/disintegration/imaging"
-	"github.com/fatih/color"
-	"github.com/gabriel-vasile/mimetype"
 	"ganigeorgiev.com/pocketbase/pocketbase/tools/filesystem/blob"
 	"ganigeorgiev.com/pocketbase/pocketbase/tools/filesystem/internal/fileblob"
 	"ganigeorgiev.com/pocketbase/pocketbase/tools/filesystem/internal/s3blob"
@@ -26,6 +23,9 @@ import (
 	"ganigeorgiev.com/pocketbase/pocketbase/tools/hook"
 	"ganigeorgiev.com/pocketbase/pocketbase/tools/list"
 	"ganigeorgiev.com/pocketbase/pocketbase/tools/routine"
+	"github.com/disintegration/imaging"
+	"github.com/fatih/color"
+	"github.com/gabriel-vasile/mimetype"
 	"github.com/spf13/cast"
 
 	// manually register the webp decoder because disintegration/imaging does not support webp
@@ -654,7 +654,7 @@ func (s *System) createThumb(originalKey, thumbKey, thumbSize string) error {
 
 	maxPixels := cast.ToInt64(os.Getenv("PB_THUMBS_MAX_SOURCE_PIXELS"))
 	if maxPixels <= 0 {
-		maxPixels = 250 << 20
+		maxPixels = 100 << 20
 	}
 
 	currentDimensions := int64(config.Width) * int64(config.Height)

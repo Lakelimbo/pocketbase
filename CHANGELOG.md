@@ -15,6 +15,8 @@
 
 - Replaced the tree-like console characters with simple `>` in the startup console message since a user reported poor font rending.
 
+- Changed the default value of the recent `PB_THUMBS_MAX_SOURCE_PIXELS` limit to `100 << 20` since the old `250 << 20` was unnecessery too high _(there will be a warning log if it is ever exceeded and we can further adjust based on the reported use cases)_.
+
 - Minor mailer fixes for [#7871](https://github.com/pocketbase/pocketbase/issues/7871):
     - (SMTP) skip `Message.HTML` multipart assignment if empty
     - (`sendmail`) set `Content-Type:text/plain` instead of `text/html` if the `Message.HTML` field is empty _(`multipart/mixed` and attachments support for the sendmailer will be further evaluated in the future)_
